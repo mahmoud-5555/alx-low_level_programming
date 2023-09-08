@@ -7,13 +7,17 @@
  */
 int main(void)
 {
-	long number;
+	long long number;
 
-	scanf("%ld", &number);
-	if (number >= 0)
-		printf("%ld: is positive\n", number);
+	scanf("%lld", &number);
+	if (number > 0)
+		printf("%lld: is positive\n", number);
+
+	else if (number == 0)
+		printf("%lld: is zero\n", number);
+
 	else
-		printf("%ld: is negative\n", number);
+		printf("%lld: is negative\n", number);
 
 	return (0);
 }
