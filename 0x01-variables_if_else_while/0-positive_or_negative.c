@@ -11,13 +11,13 @@ int main(void)
 
 	scanf("%lld", &number);
 	if (number > 0)
-		printf("%lld: is positive\n", number);
+		printf("%lld: is positive\n", (long long)number);
 
 	else if (number == 0)
-		printf("%lld: is zero\n", number);
+		printf("%lld: is zero\n", (long long)number);
 
 	else
-		printf("%lld: is negative\n", number);
+		printf("%lld: is negative\n", (long long)number);
 
 	return (0);
 }
