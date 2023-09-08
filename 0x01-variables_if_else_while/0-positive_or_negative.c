@@ -1,15 +1,19 @@
 #include<stdio.h>
+#include<time.h>
+#include<stdlib.h>
 
 /**
  * main - Entry point
  *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
 	int number;
 
-	scanf("%d", &number);
+	srand(time(0));
+	number = rand() - RAND_MAX / 2;
 	if (number > 0)
 		printf("%d: is positive\n", number);
 
