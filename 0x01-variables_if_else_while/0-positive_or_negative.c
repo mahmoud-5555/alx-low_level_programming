@@ -13,7 +13,7 @@ int main(void)
 	int number;
 
 	srand(time(0));
-	number = rand() - RAND_MAX / 2;
+	number = rand() % 201 - 100;
 	if (number > 0)
 		printf("%i: is positive\n", number);
 
