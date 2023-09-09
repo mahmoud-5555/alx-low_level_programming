@@ -11,11 +11,12 @@ int main(void)
 	char myChar[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	int i;
 
-	for (i = 0; i < 53; i++)
+	for (i = 0; i < 52; i++)
 	{
 
 		putchar(myChar[i]);
 	}
 
+	putchar("\n");
 	return (0);
 }
