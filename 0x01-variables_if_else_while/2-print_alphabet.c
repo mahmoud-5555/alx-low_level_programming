@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+
+int main(void)
+{
+	char myChar[] = "abcdefghigklmnopqrstuvwxyz";
+
+	for (int i = 0 ; i < 26 ; i++)
+	{
+
+		putchar(myChar[i]);
+		putchar('\n');
+
+	}
+
+	return (0);
+}
