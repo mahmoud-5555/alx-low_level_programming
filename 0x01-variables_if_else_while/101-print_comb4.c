@@ -35,7 +35,7 @@ int main(void)
 
 		}
 		x = x + 1;
-		y = y + 2;
+		y = y + 1;
 	}
 
 	putchar('\n');
