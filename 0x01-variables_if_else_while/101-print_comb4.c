@@ -10,8 +10,8 @@ int main(void)
 {
 	int i, j, x, y, k;
 
-	x = 48;
-	y = 48;
+	x = 49;
+	y = 50;
 	for (i = 48; i < 58; i++)
 	{
 		for (j = x; j < 58; j++)
@@ -32,8 +32,8 @@ int main(void)
 			}
 
 		}
-		x = x + 1;
-		y = y + 2;
+		x = x + 2;
+		y = y + 3;
 	}
 
 	putchar('\n');
