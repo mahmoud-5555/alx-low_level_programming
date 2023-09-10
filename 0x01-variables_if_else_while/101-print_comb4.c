@@ -33,7 +33,7 @@ int main(void)
 
 		}
 		x = x + 1;
-		y = y + 1;
+		y = y + 2;
 	}
 
 	putchar('\n');
