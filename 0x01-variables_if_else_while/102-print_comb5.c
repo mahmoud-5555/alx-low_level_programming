@@ -15,7 +15,7 @@ int main(void)
         for (j = 48; j < 58; j++)
         {
             for (k = i; k < 58; k++)
-            {    
+            {
                 for (l = j+1; l < 58; l++)
                 {
                     putchar(i);
@@ -27,9 +27,8 @@ int main(void)
                     putchar(' ');
                }
             }
-        }    
+        }
     }
     putchar('\n');
     return (0);
-        
 }
