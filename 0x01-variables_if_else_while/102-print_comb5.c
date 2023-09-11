@@ -8,27 +8,33 @@
 
 int main(void)
 {
-    int i, j, k, l;
+	int i, j, k, l, x;
 
-    for (i = 48; i < 58; i++)
-    {
-        for (j = 48; j < 58; j++)
-        {
-            for (k = i; k < 58; k++)
-            {
-                for (l = j+1; l < 58; l++)
-                {
-                    putchar(i);
-                    putchar(j);
-                    putchar(' ');
-                    putchar(k);
-                    putchar(l);
-                    putchar(',');
-                    putchar(' ');
-               }
-            }
-        }
-    }
-    putchar('\n');
-    return (0);
+	for (i = 48; i < 58; i++)
+	{
+		for (j = 48; j < 58; j++)
+		{
+			x = j + 1;
+
+			for (k = i; k < 58; k++)
+			{
+				for (l = x; l < 58; l++)
+				{
+					if (i != k || j != l)
+					{
+						putchar(i);
+						putchar(j);
+						putchar(' ');
+						putchar(k);
+						putchar(l);
+						putchar(',');
+						putchar(' ');
+					}
+				}
+				x = 48;
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
 }
