@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * __isalpha - Entry point
+ * _isalpha - Entry point
  *
  * @c:the input of the function that will be check
  *
