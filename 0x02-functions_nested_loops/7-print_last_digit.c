@@ -11,10 +11,18 @@ int print_last_digit(int n)
 {
 	int i;
 
-	if (n < 0)
-		i = n * -1;
+	if (n == INI_MIT)
+	{
+		i = -(long)n;
+
+	}
 	else
-		i = n;
+	{
+		if (n < 0)
+			i = n * -1;
+		else
+			i = n;
+	}
 
 	_putchar('0' + (i % 10));
 	return (i % 10);
