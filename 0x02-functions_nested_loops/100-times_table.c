@@ -19,7 +19,7 @@ void print_times_table(int n)
 			if (j != n && j != 0)
 			{
 				if (res < 10)
-					printf(" %i, ", res);
+					printf("  %i, ", res);
 				else
 					printf("%i, ", res);
 			}
@@ -30,7 +30,7 @@ void print_times_table(int n)
 			else
 			{
 			if (res < 10)
-				printf(" %i", res);
+				printf("  %i", res);
 			else
 				printf("%i", res);
 			}
