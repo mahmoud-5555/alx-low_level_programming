@@ -11,7 +11,7 @@ int print_last_digit(int n)
 {
 	int i;
 
-	if (n == INI_MIT)
+	if (n == INI_MIN)
 	{
 		i = -(long)n;
 
