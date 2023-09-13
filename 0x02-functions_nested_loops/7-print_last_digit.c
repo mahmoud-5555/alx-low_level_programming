@@ -12,18 +12,11 @@ int print_last_digit(int n)
 {
 	int i;
 
-	if (n == INT_MIN)
-	{
-		i = -(long)n;
-
-	}
+	if (n < 0)
+		i = n * -1;
 	else
-	{
-		if (n < 0)
-			i = n * -1;
-		else
-			i = n;
-	}
+		i = n % 10;
+
 
 	_putchar('0' + (i % 10));
 	return (i % 10);
