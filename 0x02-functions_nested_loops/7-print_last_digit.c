@@ -9,7 +9,7 @@
 
 int print_last_digit(int n)
 {
-	int i
+	int i;
 
 	if (n < 0)
 		i = n * -1;
@@ -20,11 +20,8 @@ int print_last_digit(int n)
 	return (i % 10);
 
 }
-
 /**
  * main - Entry point
  *
  * Return: Always 0 (Success)
  */
-
-
