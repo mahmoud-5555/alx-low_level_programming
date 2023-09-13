@@ -8,13 +8,15 @@
 
 void jack_bauer(void)
 {
-	int hr0, hr1, min0, min1,x;
+	int hr0, hr1, min0, min1, x;
 
 	x = 10;
 	for (hr0 = 0; hr0 < 3; hr0++)
-	{	if(hr0 == 2)
+	{
+		if (hr0 == 2)
 			x = 4;
-		for (hr1 = 0; hr1 < x ; hr1++)
+
+		for (hr1 = 0; hr1 < x; hr1++)
 		{
 			for (min0 = 0; min0 < 60; min0++)
 			{
