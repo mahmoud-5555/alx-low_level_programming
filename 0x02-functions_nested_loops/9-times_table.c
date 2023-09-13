@@ -15,7 +15,7 @@ void times_table(void)
 	{
 		for (j = 0; j < 10; j++)
 		{
-			printf("%2d, ", res);
+			printf("%2i, ", res);
 		}
 		printf("\n");
 	}
