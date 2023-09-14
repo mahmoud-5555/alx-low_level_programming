@@ -10,20 +10,18 @@
 
 int print_last_digit(int n)
 {
-	int i, res;
+	int a;
 
 	if (n < 0)
-	{
-		i = n;
-		i = -i;
-	}
-	else
-		i = n;
-	res = i % 10;
+		n = -n;
 
-	_putchar(res + '0');
-	return (res);
+	a = n % 10;
 
+	if (a < 0)
+		a = -a;
+
+	_putchar(a + '0');
+	return (a);
 }
 /**
  * main - Entry point
