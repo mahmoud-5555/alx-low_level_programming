@@ -11,13 +11,15 @@
 
 int main(void)
 {
-	int i, sum;
+	unsigned long i, sum;
 
 	sum = 1;
 	for (i = 0; i < 50; i++)
 	{
-
-		printf("%i, ", sum);
+		if (i != 49)
+			printf("%lu, ", sum);
+		else
+			printf("%lu", sum);
 		sum += sum;
 
 	}
