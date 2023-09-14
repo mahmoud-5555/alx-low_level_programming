@@ -25,7 +25,7 @@ void print_times_table(int n)
 			}
 			else if (j == 0)
 			{
-				printf("  %i, ", res);
+				printf("%i, ", res);
 			}
 			else
 			{
