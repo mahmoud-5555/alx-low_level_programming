@@ -23,7 +23,7 @@ void print_times_table(int n)
 				else if (res > 10 && res < 100)
 					printf(" %i, ", res);
 				else
-					printf("%i, ");
+					printf("%i, ",res);
 			}
 			else if (j == 0)
 			{
