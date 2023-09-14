@@ -19,11 +19,11 @@ void print_times_table(int n)
 			if (j != n && j != 0)
 			{
 				if (res < 10)
-					printf("  %i,", res);
+					printf("   %i,", res);
 				else if (res > 9 && res < 100)
-					printf(" %i,", res);
+					printf("  %i,", res);
 				else
-					printf("%i,", res);
+					printf(" %i,", res);
 			}
 			else if (j == 0)
 			{
@@ -32,11 +32,11 @@ void print_times_table(int n)
 			else
 			{
 			if (res < 10)
-				printf("  %i", res);
+				printf("   %i", res);
 			else if (res > 9 && res < 100)
-				printf(" %i", res);
+				printf("  %i", res);
 			else
-				printf("%i", res);
+				printf(" %i", res);
 			}
 		}
 		printf("\n");
