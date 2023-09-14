@@ -1,0 +1,31 @@
+#include "main.h"
+#include <stdio.h>
+/**
+ * more_numbers - Entry point
+ *
+ *
+ *
+ *
+ * Return:  (Success)
+ */
+
+void more_numbers(void)
+{
+	int i;
+
+	for (i = 0; i <= 14; i++)
+	{
+		_putchar((10 / i) + '0');
+		if (i > 9)
+			_putchar((i % 10) + '0');
+
+	}
+
+	_putchar('\n');
+}
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
