@@ -11,16 +11,18 @@
 
 int main(void)
 {
-	unsigned long i, sum;
+	unsigned long i, a, b;
 
-	sum = 1;
+	a = 1;
+	b = 0;
 	for (i = 0; i < 50; i++)
 	{
 		if (i != 49)
-			printf("%lu, ", sum);
+			printf("%lu, ", a);
 		else
-			printf("%lu", sum);
-		sum += sum;
+			printf("%lu", a);
+		b = a;
+		a = a + b;
 
 	}
 	printf("\n");
