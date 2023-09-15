@@ -32,6 +32,7 @@ int main(void)
 			printf("%i ", i);
 	}
 	_putchar('\n');
+	return (0);
 }
 
 /**
