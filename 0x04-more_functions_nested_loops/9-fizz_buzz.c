@@ -31,10 +31,9 @@ int main(void)
 		else
 			printf("%i ", i);
 	}
-	_putchar('\n');
+	printf("\n");
 	return (0);
 }
-
 /**
  * main - Entry point
  *
