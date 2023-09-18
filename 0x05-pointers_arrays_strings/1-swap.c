@@ -10,14 +10,14 @@
  * Return:  (Success)
  */
 
-void swap_int(int &a, int &b)
+void swap_int(int *a, int *b)
 {
 
-	int *swi;
+	int swi;
 
-	swi = a;
-	a = b;
-	b = swi;
+	swi = *a;
+	*a = *b;
+	*b = swi;
 }
 
 /**
