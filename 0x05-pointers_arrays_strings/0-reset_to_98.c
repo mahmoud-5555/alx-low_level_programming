@@ -4,7 +4,7 @@
 /**
  * reset_to_98 - Entry point
  *
- * @n the input that we deal with it
+ * @n: the input that we deal with it
  *
  * Return:  (Success)
  */
