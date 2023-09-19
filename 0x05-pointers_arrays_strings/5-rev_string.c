@@ -13,6 +13,7 @@ void rev_string(char *s)
 {
 	int it = 0;
 	int i;
+	char *str;
 
 	while (s[it] != '\0')
 	{
@@ -20,7 +21,7 @@ void rev_string(char *s)
 	}
 	it -= 1;
 
-	char *str = (char *)malloc(it + 1);
+	str = (char *)malloc(it + 1);
 
 	for (i = it; i >= 0; i--)
 		str[it - i] = s[i];
