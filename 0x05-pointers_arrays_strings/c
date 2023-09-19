@@ -1,0 +1,30 @@
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * print_array - Entry point
+ *
+ * @a: the input that we deal with it
+ * @n: the input that we deal with it
+ *
+ * Return:  (Success)
+ */
+
+void print_array(int *a, int n)
+{
+	int i;
+
+
+	for (i = 0; i < n; i++)
+		if(i != n - 1)
+			printf("%i, ",a[i]);
+		else
+			printf("%i", a[i]);
+	putchar('\n');
+}
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
