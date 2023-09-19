@@ -34,7 +34,7 @@ int _atoi(char *s)
 	for ( ; it < ln; it++)
 	{
 		ordaer = 1;
-		for (i = 0; i < (ln - it -1), i++)
+		for (i = 0; i < (ln - it -1); i++)
 			ordaer *= 10;
 		num += num + (ordaer * (s[it] - '0'));
 	}
