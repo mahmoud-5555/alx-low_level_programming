@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
  * rev_string - Entry point
  *
@@ -19,13 +19,14 @@ void rev_string(char *s)
 		it++;
 	}
 	it -= 1;
-	char string[it];
+	char *string = (char *)malloc(it + 1);
 
 	for (i = it; i >= 0; i--)
 		string[it - i] = s[i];
 
 	for (i = 0; i <= it; i++)
 		s[i] = string[i];
+	free(string);
 }
 
 /**
