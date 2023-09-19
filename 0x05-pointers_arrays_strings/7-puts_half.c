@@ -9,7 +9,7 @@
  * Return:  (Success)
  */
 
-puts_half(char *str)
+void puts_half(char *str)
 {
 	int it = 0;
 	int i;
