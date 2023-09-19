@@ -19,14 +19,14 @@ void rev_string(char *s)
 		it++;
 	}
 	it -= 1;
-	char *string = (char *)malloc(it + 1);
+	char *str = (char *)malloc(it + 1);
 
 	for (i = it; i >= 0; i--)
-		string[it - i] = s[i];
+		str[it - i] = s[i];
 
 	for (i = 0; i <= it; i++)
-		s[i] = string[i];
-	free(string);
+		s[i] = str[i];
+	free(str);
 }
 
 /**
