@@ -2,14 +2,14 @@
 #include <stdio.h>
 
 /**
- * print_rev - Entry point
+ * rev_string - Entry point
  *
- * @s: the input that we deal with it
+ * @s :this is the input of the function
  *
  * Return:  (Success)
  */
 
-void print_rev(char *s)
+void rev_string(char *s)
 {
 	int it = 0;
 	int i;
