@@ -11,9 +11,10 @@
 
 int _atoi(char *s)
 {
-	int ln = 0, num = 0, sign = 1, it = 0, i;
+	int ln = 0, sign = 1, it = 0, i;
 	int order = 1, start = 0, end = 0, s_num = 1;
 	int stop = 1;
+	long num = 0;
 
 	if (s[0] == '\0')
 		return (0);
@@ -26,7 +27,7 @@ int _atoi(char *s)
 		}
 		if (!((s[ln] >= '0') && (s[ln] <= '9')) &&  !s_num)
 			stop = 0;
-		if (s[ln] == '-')
+		if (s[ln] == '-' && stop)
 			sign *= -1;
 		if (stop)
 			end = ln;
