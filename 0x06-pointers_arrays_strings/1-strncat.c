@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _strcat - Entry point
+ * strncat - Entry point
  *
  * @dest : the input that we deal with it
  * @src : the input that we deal with it
