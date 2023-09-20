@@ -2,14 +2,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _strncat - Entry point
+ * _strncpy - Entry point
  *
  * @dest : the input that we deal with it
  * @src : the input that we deal with it
  * @n :the input of the function
  * Return:  (Success)
  */
-char *_strncat(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
 	int ln = 0;
 	int ln2 = 0;
@@ -20,12 +20,12 @@ char *_strncat(char *dest, char *src, int n)
 	while ((src[ln2] != '\0') && (n > ln2))
 		ln2++;
 
-	for (i = 0; i < ln2; i++)
+	for (i = 0; i < n; i++)
 	{
-		dest[ln + i] = src[i];
+		dest[i] = src[i];
 	}
 
-	dest[ln + ln2] = '\0';
+	dest[ln + n] = '\0';
 
 	return (dest);
 }
