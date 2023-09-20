@@ -18,24 +18,17 @@ char *_strncat(char *dest, char *src, int n)
 
 	while (dest[ln] != '\0')
 		ln++;
-	while ((src[ln2] != '\0') && (n >= ln2))
+	while ((src[ln2] != '\0') && (n > ln2))
 		ln2++;
-
-	res = (char *)malloc(ln + ln2 + 1);
-
-	for (i = 0; i < ln; i++)
-		res[i] = dest[i];
 
 	for (i = 0; i < ln2; i++)
 	{
-		res[ln + i] = src[i];
 		dest[ln + i] = src[i];
 	}
 
-	res[ln + ln2] = '\0';
 	dest[ln + ln2] = '\0';
 
-	return (res);
+	return (dest);
 }
 /**
  * main - Entry point
