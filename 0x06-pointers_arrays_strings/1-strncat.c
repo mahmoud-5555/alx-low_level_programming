@@ -1,0 +1,44 @@
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+/**
+ * _strcat - Entry point
+ *
+ * @dest : the input that we deal with it
+ * @src : the input that we deal with it
+ * @n :the input of the function
+ * Return:  (Success)
+ */
+char *_strncat(char *dest, char *src, int n)
+{
+	int ln = 0;
+	int ln2 = 0;
+	int i = 0;
+	char *res;
+
+	while (dest[ln] != '\0')
+		ln++;
+	while ((src[ln2] != '\0') && (n >= ln2))
+		ln2++;
+
+	res = (char *)malloc(ln + ln2 + 1);
+
+	for (i = 0; i < ln; i++)
+		res[i] = dest[i];
+
+	for (i = 0; i < ln2; i++)
+	{
+		res[ln + i] = src[i];
+		dest[ln + i] = src[i];
+	}
+
+	res[ln + ln2] = '\0';
+	dest[ln + ln2] = '\0';
+
+	return (res);
+}
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
