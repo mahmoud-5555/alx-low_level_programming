@@ -26,10 +26,11 @@ char *_strcat(char *dest, char *src)
 	for (i = 0; i < ln; i++)
 		res[i] = dest[i];
 
-	for (int i = 0; i < ln2; i++)
+	for (i = 0; i < ln2; i++)
 		res[ln + i] = src[i];
 
 	res[ln + ln2] = '\0';
+	dest = res ;
 
 	return (res);
 }
