@@ -30,7 +30,7 @@ char *_strcat(char *dest, char *src)
 		res[ln + i] = src[i];
 
 	res[ln + ln2] = '\0';
-	src = res;
+	dest = res;
 
 	return (res);
 }
