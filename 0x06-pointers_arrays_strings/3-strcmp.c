@@ -12,22 +12,23 @@
 int _strcmp(char *s1, char *s2)
 {
 	int ln = 0;
-	int res = 0;
+
 
 
 	while ((s1[ln] != '\0') && (s2[ln] != '\0'))
 	{
 
-		if (s1[ln] > s2[ln])
-			res++;
-
-		else if (s1[ln] < s2[ln])
-			res--;
-
+		if (s1[ln] != s2[ln])
+		{
+			return (s1[ln] - s2[ln]);
+		}
 		ln++;
-
 	}
-	return (res);
+	return (0);
+
+
+
+
 }
 /**
  * main - Entry point
