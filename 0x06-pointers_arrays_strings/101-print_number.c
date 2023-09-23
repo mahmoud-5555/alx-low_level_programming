@@ -1,20 +1,30 @@
-102-magic.c
+#include "main.h"
 
-#include <stdio.h>
+/**
+ * print_number - function that print number
+ * @n: integer input of the function
+ * Return: 0
+ */
 
-int main(void)
+void print_number(int n)
 {
-  int n;
-  int a[5];
-  int *p;
+	unsigned int number;
 
-  a[2] = 1024;
-  p = &n;
+	number = n;
 
-  *(p + 5) = 98;
+	if (n < 0)
+	{
+		_putchar('-');
 
-  printf("a[2] = %d\n", a[2]);
+		number = -n;
+	}
 
-  return (0);
+	if (number / 10 != 0)
+	{
+
+		print_number(number / 10);
+
+	}
+
+	_putchar((number % 10) + '0');
 }
-
