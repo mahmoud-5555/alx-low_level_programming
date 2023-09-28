@@ -4,11 +4,12 @@
 /**
  * _puts_recursion - Entry point
  *
+ * @s : is string
  * Return: void ( No return )  (Success)
  */
-void _puts_recursion(char *s);
+void _puts_recursion(char *s)
 {
-	if(*S)
+	if (*s)
 	{
 		_putchar(*s);
 		_puts_recursion(s + 1);
