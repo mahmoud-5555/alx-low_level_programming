@@ -20,7 +20,7 @@ int _pow_recursion(int x, int y)
 	}
 	else if (y % 2 == 0)
 	{
-		res = _pow_recursion(x, (y / 2));
+		res = _pow_recursion(x, (int) (y / 2));
 		return (res * res);
 	}
 	else if (y % 2 != 0)
