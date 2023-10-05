@@ -18,7 +18,7 @@ char *create_array(unsigned int size, char c)
 	if (size == 0)
 		return (NULL);
 
-	char *arr = (char *) mollac(sizeof(char) * size);
+	char *arr = (char *) mallac(sizeof(char) * size);
 
 	if (arr == NULL)
 	{
@@ -30,7 +30,7 @@ char *create_array(unsigned int size, char c)
 	}
 	else
 	{
-		while (i > size)
+		while (i < size)
 		{
 			*(arr + i) = c;
 			i++;
