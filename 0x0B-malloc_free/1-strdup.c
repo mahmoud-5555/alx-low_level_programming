@@ -21,10 +21,10 @@ char *_strdup(char *str)
 	{
 		length++;
 	}
-	if (!length)
+	if (length == 0)
 		return (NULL);
 
-	new_str = (char *)malloc((sizeof(char) * length) + 1);
+	new_str = (char *)malloc((sizeof(char) * ((length  * 2) + 1)));
 
 			if (new_str == NULL)
 				return (NULL);
