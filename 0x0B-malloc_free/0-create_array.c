@@ -35,7 +35,7 @@ char *create_array(unsigned int size, char c)
 		{
 			*(arr + i) = c;
 			i++;
-			c++;
+
 		}
 
 
