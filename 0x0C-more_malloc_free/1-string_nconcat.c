@@ -17,7 +17,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *ptr;
 	int len_s1 = 0;
 	int len_s2 = 0;
-	int iterator = 0;
+	unsigned int  iterator = 0;
 
 	while (*(s1 + iterator) != '\0')
 	{
