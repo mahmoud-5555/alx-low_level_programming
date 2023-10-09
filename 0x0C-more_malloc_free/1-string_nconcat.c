@@ -51,7 +51,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	for (iterator = 0; iterator < n; iterator++)
 	{
-		*(ptr + iterator + len_s1) = s2[iterator % (len_s2 - 1)];
+		*(ptr + iterator + len_s1) = s2[iterator % len_s2];
 	}
 	*(ptr + iterator + len_s1) = '\0';
 
