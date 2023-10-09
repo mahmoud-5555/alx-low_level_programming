@@ -15,57 +15,37 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	unsigned int len_s1 = 0;
-	unsigned int len_s2 = 0;
-	unsigned int  iterator = 0;
+	unsigned int iteretor = 0, j = 0, len_s1 = 0, len_s2 = 0;
 
-    if (s1 == NULL  || s2 == NULL)
-    {
-        ptr = (char *) malloc(1);
-        ptr[0] = '\0';
-        return (ptr);
-    }
-
-
-
-	while (*(s1 + iterator) != '\0')
-	{
+    /*cout the length of the string*/
+	while (s1 && s1[len_s1])
 		len_s1++;
-		iterator++;
-	}
 
-	iterator = 0;
-
-	while (*(s2 + iterator) != '\0' && iterator < n)
-	{
+	while (s2 && s2[len_s2])
 		len_s2++;
-		iterator++;
-	}
-    
 
 	if (n < len_s2)
 		ptr = malloc(sizeof(char) * (len_s1 + n + 1));
 	else
-		ptr = malloc(sizeof(char) * (len_s2 + len_s1 + 1));
+		ptr = malloc(sizeof(char) * (len_s1 + len_s2 + 1));
 
-
-
-	if (ptr == NULL)
+	if (!ptr)
 		return (NULL);
 
-
-	for (iterator = 0; *(s1 + iterator) != '\0'; iterator++)
+	while (iteretor < len_s1)
 	{
-		*(ptr + iterator) = *(s1 + iterator);
+		ptr[iteretor] = s1[iteretor];
+		iteretor++;
 	}
 
-	for (iterator = 0; iterator < len_s2; iterator++)
-	{
-		*(ptr + iterator + len_s1) = s2[iterator];
-	}
-	*(ptr + n + len_s1) = '\0';
+	while (n < len_s2 && iteretor < (len_s1 + n))
+		ptr[iteretor++] = s2[j++];
 
+	while (n >= len_s2 && iteretor < (len_s1 + len_s2))
+		ptr[iteretor++] = s2[j++];
 
+	ptr[iteretor] = '\0';
 
 	return (ptr);
 }
+
