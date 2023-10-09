@@ -43,10 +43,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
     
 
-	ptr = (char *) malloc(len_s1 + n + 1);
+	if (n < len_s2)
+		ptr = malloc(sizeof(char) * (len_s1 + n + 1));
+	else
+		ptr = malloc(sizeof(char) * (len_s2 + len_s1 + 1));
+
+
 
 	if (ptr == NULL)
-		return (ptr);
+		return (NULL);
 
 
 	for (iterator = 0; *(s1 + iterator) != '\0'; iterator++)
