@@ -21,10 +21,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	for (itretor = 0; itretor < n; itretor++)
 	{
 		ptr = va_arg(args, char*);
-		if (massige[i] == NULL)
+		if (massige[i] == '\0')
 		{
 			i = 0;
-			while (massige[i] != "\0")
+			while (massige[i] != '\0')
 			{
 				_putchar(*(ptr + i));
 				i++;
@@ -33,7 +33,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		else
 		{
 			i = 0;
-			while (*(ptr + i) != "\0")
+			while (*(ptr + i) != '\0')
 			{
 				_putchar(*(ptr + i));
 				i++;
@@ -42,14 +42,14 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if (itretor != (n - 1))
 		{
 			i = 0;
-			while (*(separator + i) != "\0")
+			while (*(separator + i) != '\0')
 			{
 				_putchar(*(separator + i));
 			    i++;
 			}
 		}
 	}
-	_putchar('\n');
+	putchar('\n');
 	va_end(args);
 }
 
