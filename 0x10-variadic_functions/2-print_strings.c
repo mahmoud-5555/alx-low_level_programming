@@ -11,25 +11,46 @@
 
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-
 	va_list args;
 	unsigned int itretor;
 	char *ptr;
+	int i;
+	char massige[] = "(nil)";
 
 	va_start(args, n);
 	for (itretor = 0; itretor < n; itretor++)
 	{
 		ptr = va_arg(args, char*);
-
-		if (ptr == NULL)
-			printf("(nil)");
-
+		if (massige[i] == NULL)
+		{
+			i = 0;
+			while (massige[i] != "\0")
+			{
+				_putchar(*(ptr + i));
+				i++;
+			}
+		}
 		else
-			printf("%s", ptr);
-
+		{
+			i = 0;
+			while (*(ptr + i) != "\0")
+			{
+				_putchar(*(ptr + i));
+				i++;
+			}
+		}
 		if (itretor != (n - 1))
-			printf("%s", separator);
+		{
+			i = 0;
+			while (*(separator + i) != "\0")
+			{
+				_putchar(*(separator + i));
+			    i++;
+			}
+		}
 	}
-	putchar('\n');
+	_putchar('\n');
 	va_end(args);
 }
+
+
