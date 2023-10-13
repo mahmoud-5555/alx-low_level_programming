@@ -1,5 +1,5 @@
 #include<stdarg.h>
-#include"main.h"
+#include"variadic_functions.h"
 
 /**
 * print_strings - sum argumints
