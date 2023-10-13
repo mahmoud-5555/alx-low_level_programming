@@ -22,10 +22,14 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		if (itretor != (n - 1))
 		{
 			i = 0;
-			while (*(separator + i) != '\0')
+
+			if (separator != NULL)
 			{
-				_putchar(*(separator + i));
-				i++;
+				while ((*(separator + i) != '\0'))
+				{
+					_putchar(*(separator + i));
+					i++;
+				}
 			}
 
 		}
