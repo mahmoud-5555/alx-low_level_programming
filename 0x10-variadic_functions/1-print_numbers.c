@@ -48,6 +48,12 @@ int print_num(int n)
 {
 	unsigned int num;
 
+	if (n == 0)
+	{
+		_putchar('0');
+		return (0);
+	}
+
 	if (n < 0)
 	{
 		_putchar('-');
@@ -58,7 +64,9 @@ int print_num(int n)
 
 	if (num != 0)
 	{
-		print_num(num / 10);
+		if ((num / 10) != 0)
+			print_num(num / 10);
+
 		_putchar('0' + (num % 10));
 	}
 
