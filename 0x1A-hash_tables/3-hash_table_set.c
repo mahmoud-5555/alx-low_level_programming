@@ -16,10 +16,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	char *newvalue;
 
 	if (!ht || !key || !value || ht->size == 0)
-	{
-		free(new_node);
 		return (0);
-	}
+	
 	index = key_index((const unsigned char *)key, ht->size);
 	/* If there's already a node in this position */
 	it = ht->array[index];
@@ -39,8 +37,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!new_node)
 		return (0);
 	 new_node->next = ht->array[index];
-	 new_node->key = key;
+	 new_node->key = (char *)key;
 	 new_node->value = (char *)value;
-	 ht->array[index] = (char *)new_node;
+	 ht->array[index] = new_node;
 	return (0);
 }
