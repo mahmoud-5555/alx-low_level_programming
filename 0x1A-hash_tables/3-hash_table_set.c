@@ -17,7 +17,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (!ht || !key || !value || ht->size == 0)
 		return (0);
-	
+
 	index = key_index((const unsigned char *)key, ht->size);
 	/* If there's already a node in this position */
 	it = ht->array[index];
