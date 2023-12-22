@@ -22,7 +22,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		free(new_node);
 		return (1);
 	}
-	index = key_index(key, ht->size);
+	index = hash_djb2(key) % ht->size;
 	/* If there's already a node in this position */
 	if (ht->array[index] == NULL)
 		ht->array[index] = new_node;
