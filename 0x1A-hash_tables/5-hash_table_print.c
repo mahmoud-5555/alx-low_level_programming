@@ -13,7 +13,7 @@ void hash_table_print(const hash_table_t *ht)
 
 	printf("{");
 	if (!ht)
-		return (NULL);
+		return;
 
 	for (it_int = 0; it_int < ht->size; it_int++)
 	{
@@ -23,7 +23,7 @@ void hash_table_print(const hash_table_t *ht)
 			if (!first)
 				printf(", ");
 
-			printf("'%s' :  %s", it->key, it->value);
+			printf("'%s' : '%s'", it->key, it->value);
 			it = it->next;
 			first = 0;
 		}
