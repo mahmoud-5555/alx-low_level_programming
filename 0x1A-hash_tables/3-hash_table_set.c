@@ -42,7 +42,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	return (1);
 }
 
-
+/**
+ * create_node - function that creat the new node
+ * @key: the key of the node
+ * @value: value of the node
+ * Return: the new node
+*/
 hash_node_t *create_node(char *key, char *value)
 {
 	hash_node_t *node = malloc(sizeof(hash_node_t));
