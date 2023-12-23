@@ -32,17 +32,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			it->value = newvalue;
 			return (1);
 		}
-		if (!(it->next))
-			break;
 		it = it->next;
 	}
 	new_node = create_node((char *) key, (char *)value);
 	if (!new_node)
 		return (0);
-	if (ht->array[index] != NULL)
-		it->next = new_node;
-	else
-	ht->array[index] = new_node;
+	 new_node->next = ht->array[index];
+	 ht->array[index] = new_node;
 	return (1);
 }
 
@@ -50,7 +46,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
  * create_node - function that creat the new node
  * @key: the key of the node
  * @value: value of the node
- * Return: the new node
+ * Return: return new node
 */
 hash_node_t *create_node(char *key, char *value)
 {
@@ -62,6 +58,5 @@ hash_node_t *create_node(char *key, char *value)
 	node->value = malloc(sizeof(value));
 	strcpy(node->key, key);
 	strcpy(node->value, value);
-	node->next = NULL;
 	return (node);
 }
