@@ -15,15 +15,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int index;
 	char *newvalue;
 
-	if (!ht || !key || !value || ht->size == 0)
+	if (!ht || !key || !value || ht->size == 0 || !strlen(key))
 		return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
 	/* If there's already a node in this position */
 	it = ht->array[index];
-	while (it)
+	while (it != NULL)
 	{
-		if (!strcmp(it->value, value))
+		if (!strcmp(it->key, key))
 		{
 			newvalue = strdup(value);
 			if (!newvalue)
@@ -34,12 +34,24 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		it = it->next;
 	}
-	new_node = malloc(sizeof(hash_node_t));
+	new_node = create_node((char *) key, (char *)value);
 	if (!new_node)
 		return (0);
 	 new_node->next = ht->array[index];
-	 new_node->key = (char *)key;
-	 new_node->value = (char *)value;
 	 ht->array[index] = new_node;
-	return (0);
+	return (1);
+}
+
+
+hash_node_t *create_node(char *key, char *value)
+{
+	hash_node_t *node = malloc(sizeof(hash_node_t));
+
+	if (!node)
+		return (NULL);
+	node->key = malloc(sizeof(key));
+	node->value = malloc(sizeof(value));
+	strcpy(node->key, key);
+	strcpy(node->value, value);
+	return (node);
 }
